@@ -3,7 +3,7 @@ package com.sofka.software.model;
 import com.sofka.software.conexion.base.datos.Conexion;
 import com.sofka.software.interfazconexion.InterfacePerson;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
