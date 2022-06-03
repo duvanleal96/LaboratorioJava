@@ -1,15 +1,11 @@
 package com.sofka.software;
 
-import com.sofka.software.conexion.base.datos.Conexion;
-import com.sofka.software.model.Prueba;
+import com.sofka.software.view.game.Register;
 
 public class Main {
 
     public static void main(String[] args) {
-        Conexion con = new Conexion();
-        con.crearConexion();
-        Prueba p = new Prueba();
-        p.consultarDatos(con);
+        Register reg = new Register();
 
     }
 }

@@ -10,7 +10,7 @@ public class Category {
     private final String sql_select = "SELECT * FROM tbcategoria ";
     private final String sql_selectCat = "SELECT * FROM tbcategoria WHERE id = ?";
     private PreparedStatement ps;
-    private Conexion con;
+    private final Conexion con;
     private ResultSet res;
 
 
