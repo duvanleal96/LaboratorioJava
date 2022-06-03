@@ -1,4 +1,4 @@
-package com.sofka.software.interfazconexion;
+package com.sofka.software.conexion.base.datos;
 
 
 import java.sql.Connection;

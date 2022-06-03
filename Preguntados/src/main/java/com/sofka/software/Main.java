@@ -1,9 +1,7 @@
 package com.sofka.software;
 
-import com.sofka.software.interfazconexion.Conexion;
+import com.sofka.software.conexion.base.datos.Conexion;
 import com.sofka.software.model.Prueba;
-
-import java.sql.PreparedStatement;
 
 public class Main {
 
