@@ -10,7 +10,7 @@ public class Register extends javax.swing.JFrame {
     private Player jug;
 
     public Register() {
-        //initComponents();
+        initComponents();
         jug = new Player();
         setVisible(true);
     }
@@ -40,7 +40,7 @@ public class Register extends javax.swing.JFrame {
     }//GEN-LAST:event_jtf_nombreActionPerformed
 
     private void btnInstruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInstruccionesActionPerformed
-      Intruction ins = new Intruction();
+      Instruction ins = new Instruction();
       ins.setVisible(true);
     }//GEN-LAST:event_btnInstruccionesActionPerformed
 

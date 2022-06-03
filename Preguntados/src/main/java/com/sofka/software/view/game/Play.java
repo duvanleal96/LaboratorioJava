@@ -39,7 +39,7 @@ public class Play extends javax.swing.JFrame {
     ArrayList<String> listaDes = new ArrayList<String>();
 
     public Play(String nombre, int puntaje) {
-       // initComponents();
+        initComponents();
        
         cat = new Category();
         preg = new Question();
@@ -55,6 +55,7 @@ public class Play extends javax.swing.JFrame {
         subirNivel(nivel);
 
     }
+
 
     public void subirNivel(int i) {
         nombreCat = cat.queryCategory(i);

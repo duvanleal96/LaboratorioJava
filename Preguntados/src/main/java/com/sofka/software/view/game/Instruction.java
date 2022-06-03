@@ -1,10 +1,10 @@
 package com.sofka.software.view.game;
-public class Intruction extends javax.swing.JFrame {
+public class Instruction extends javax.swing.JFrame {
 
     /**
      * Creates new form instruccion
      */
-    public Intruction() {
+    public Instruction() {
         initComponents();
         
     }
@@ -144,7 +144,7 @@ public class Intruction extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Intruction().setVisible(true);
+                new Instruction().setVisible(true);
             }
         });
     }
