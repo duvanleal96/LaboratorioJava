@@ -4,10 +4,7 @@ import com.sofka.software.model.Record;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author
- */
+
 public class Register extends javax.swing.JFrame {
 
     private Player jug;
@@ -34,8 +31,8 @@ public class Register extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt_jugarActionPerformed
 
     private void btnHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistorialActionPerformed
-      //  Record h = new Record();
-      //  h.setVisible(true);
+        RecordView h = new RecordView();
+        h.setVisible(true);
     }//GEN-LAST:event_btnHistorialActionPerformed
 
     private void jtf_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_nombreActionPerformed
@@ -43,8 +40,8 @@ public class Register extends javax.swing.JFrame {
     }//GEN-LAST:event_jtf_nombreActionPerformed
 
     private void btnInstruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInstruccionesActionPerformed
-     //   instruccion ins = new instruccion();
-     //   ins.setVisible(true);
+      Intruction ins = new Intruction();
+      ins.setVisible(true);
     }//GEN-LAST:event_btnInstruccionesActionPerformed
 
     /**

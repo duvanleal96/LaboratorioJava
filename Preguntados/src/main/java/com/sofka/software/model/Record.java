@@ -1,6 +1,5 @@
 package com.sofka.software.model;
 
-
 import com.sofka.software.conexion.base.datos.Conexion;
 
 import java.sql.PreparedStatement;
