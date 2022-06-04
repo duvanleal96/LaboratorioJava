@@ -1,4 +1,4 @@
-package com.sofka.software.view.game;
+package com.sofka.software.view;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +22,7 @@ public class RecordView extends javax.swing.JFrame {
     private void btnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioActionPerformed
         dispose();
     }//GEN-LAST:event_btnInicioActionPerformed
-
+    @SuppressWarnings("unchecked")
     private void btnBorrHistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrHistActionPerformed
         h.deleteRecord();
         jtextHistorial.setText("");

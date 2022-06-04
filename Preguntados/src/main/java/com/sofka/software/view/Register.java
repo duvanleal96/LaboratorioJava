@@ -1,4 +1,4 @@
-package com.sofka.software.view.game;
+package com.sofka.software.view;
 import com.sofka.software.model.Player;
 import com.sofka.software.model.Record;
 
@@ -10,7 +10,7 @@ public class Register extends javax.swing.JFrame {
     private Player jug;
 
     public Register() {
-        //initComponents();
+        initComponents();
         jug = new Player();
         setVisible(true);
     }
@@ -29,7 +29,7 @@ public class Register extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jbt_jugarActionPerformed
-
+    @SuppressWarnings("unchecked")
     private void btnHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistorialActionPerformed
         RecordView h = new RecordView();
         h.setVisible(true);

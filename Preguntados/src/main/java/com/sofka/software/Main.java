@@ -1,6 +1,6 @@
 package com.sofka.software;
 
-import com.sofka.software.view.game.Register;
+import com.sofka.software.view.Register;
 
 public class Main {
 

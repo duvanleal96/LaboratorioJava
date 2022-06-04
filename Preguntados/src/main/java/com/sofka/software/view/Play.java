@@ -1,4 +1,4 @@
-package com.sofka.software.view.game;
+package com.sofka.software.view;
 
 import com.sofka.software.model.*;
 
@@ -39,8 +39,7 @@ public class Play extends javax.swing.JFrame {
     ArrayList<String> listaDes = new ArrayList<String>();
 
     public Play(String nombre, int puntaje) {
-       // initComponents();
-       
+        initComponents();
         cat = new Category();
         preg = new Question();
         resp = new Response();
