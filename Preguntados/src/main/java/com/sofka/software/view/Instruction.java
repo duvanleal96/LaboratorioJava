@@ -1,4 +1,4 @@
-package com.sofka.software.view.game;
+package com.sofka.software.view;
 public class Instruction extends javax.swing.JFrame {
     /**
      * Creates new form instruccion

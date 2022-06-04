@@ -1,6 +1,5 @@
-package com.sofka.software.view.game;
+package com.sofka.software.view;
 import com.sofka.software.model.Player;
-import com.sofka.software.model.Record;
 
 import javax.swing.JOptionPane;
 

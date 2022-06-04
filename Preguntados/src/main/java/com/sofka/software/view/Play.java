@@ -1,4 +1,4 @@
-package com.sofka.software.view.game;
+package com.sofka.software.view;
 
 import com.sofka.software.model.*;
 
