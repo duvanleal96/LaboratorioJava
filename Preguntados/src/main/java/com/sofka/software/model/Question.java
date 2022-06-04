@@ -6,12 +6,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.logging.Logger;
 
 public class Question {
-    private final String sql_selectPreg = "SELECT * FROM tbpregunta WHERE idcategoria = ?";
-    private final String sql_selectNomPreg = "SELECT * FROM tbpregunta WHERE id = ?";
+    Logger log = Logger.getLogger("log");
     private PreparedStatement ps;
-    private Conexion con;
+    private final Conexion con;
     private ResultSet res;
 
     public Question() {
@@ -21,9 +21,10 @@ public class Question {
 
     public int queryQuestionCat(int idCategory) {
         int idQuestion = 0;
-        ArrayList<Integer> lista = new ArrayList<Integer>();
+        ArrayList<Integer> lista = new ArrayList<>();
         try {
-            ps = con.crearConexion().prepareStatement(sql_selectPreg);
+            String sqlSelectPreg = "SELECT * FROM tbpregunta WHERE idcategoria = ?";
+            ps = con.crearConexion().prepareStatement(sqlSelectPreg);
             ps.setInt(1, idCategory);
             res = ps.executeQuery();//ejecuta la consulta
             while (res.next()) {
@@ -32,7 +33,7 @@ public class Question {
             idQuestion = lista.get(new Random().nextInt(lista.size()));
 
         } catch (Exception e) {
-            System.err.println("Error al consulta ID de la pregunta : " + e.getMessage());
+            log.info("Error al consulta ID de la pregunta : " + e.getMessage());
         } finally {
             ps = null;
             con.close();
@@ -43,7 +44,8 @@ public class Question {
     public String queryQuestionTex(int idQuestion) {
         String namep = "";
         try {
-            ps = con.crearConexion().prepareStatement(sql_selectNomPreg); //crea conexion y prepara la consulta
+            String sqlSelectNomPreg = "SELECT * FROM tbpregunta WHERE id = ?";
+            ps = con.crearConexion().prepareStatement(sqlSelectNomPreg); //crea conexion y prepara la consulta
             ps.setInt(1, idQuestion);
             res = ps.executeQuery();
             while (res.next()) {
@@ -51,7 +53,7 @@ public class Question {
             }
 
         } catch (Exception e) {
-            System.err.println("Error al consultar la descripción de la pregunta : " + e.getMessage());
+            log.info("Error al consultar la descripción de la pregunta : " + e.getMessage());
         } finally {
             ps = null;
             con.close();

@@ -10,14 +10,11 @@ import java.util.Set;
 import javax.swing.JOptionPane;
 
 /**
+ * clase juego , importa las clases del model para obtener las consultas de la BD
  *
- * @author
  */
 public class Play extends javax.swing.JFrame {
 
-    /**
-     * Creates new form
-     */
     private Register reg;
     private Category cat;
     private Question preg;
@@ -38,6 +35,12 @@ public class Play extends javax.swing.JFrame {
     Map<Integer, String> dicRes = new HashMap<Integer, String>();
     ArrayList<String> listaDes = new ArrayList<String>();
 
+    /**
+     * metodo jugar , al inicial la interfaz grafica , muestra el nombre y puntaje actual del usuario que
+     * ingresó , ademas de mostrar la categoria y el nivel en que se encuentre
+     * @param nombre
+     * @param puntaje
+     */
     public Play(String nombre, int puntaje) {
         initComponents();
 
@@ -56,6 +59,12 @@ public class Play extends javax.swing.JFrame {
 
     }
 
+    /**
+     * Metodo subir nivel , al validar la respuesta y si es correcta aumenta en uno el parametro i , lo que
+     * causa el incrementeo del nivel y cambia la categoria , llamando otra pregunta aleatoria de la nueva
+     * categoria
+     * @param i
+     */
 
     public void subirNivel(int i) {
         nombreCat = cat.queryCategory(i);
@@ -347,14 +356,20 @@ public class Play extends javax.swing.JFrame {
 
     private void jtf_preguntaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_preguntaActionPerformed
 
-    }//GEN-LAST:event_jtf_preguntaActionPerformed
+    }
 
     private void jtfNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNombreActionPerformed
 
-    }//GEN-LAST:event_jtfNombreActionPerformed
+    }
 
+    /**
+     * Boton enviar respuesta, permite obtener la respuesta de los radioButton y comparar la correcta
+     * con la base de datos , llama a la clase Response de modelo para validarla. Verifica el nivel
+     * actual del jugador y llama al metodo subir nivel, si supera al nivel 5 el juego finaliza y gana, si el acumulado es 0 el
+     * juego cerrará
+     * @param evt
+     */
     private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
-        boolean respuesta;
         int puntAcum = 0;
         int idjugador = 0;
         resp = new Response();
@@ -387,10 +402,12 @@ public class Play extends javax.swing.JFrame {
             }
 
         }
+    }
 
-
-    }//GEN-LAST:event_btnEnviarActionPerformed
-
+    /**
+     * boton retirar, permite el retiro del consurso de manera correcta , guarda el puntaje actual y muestra el historial
+     * @param evt
+     */
     private void btnRetirarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetirarActionPerformed
         int idjugador = 0;
         int resp = JOptionPane.showConfirmDialog(null, "Está seguro de retirarse?, El juego finalizará y ganarás el acumulado actual", "Seleccione una opción", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
@@ -408,31 +425,21 @@ public class Play extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRetirarActionPerformed
 
     private void jtfCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCategoriaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfCategoriaActionPerformed
 
-    private void jtfNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNivelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfNivelActionPerformed
-
-    private void jtfPuntajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPuntajeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfPuntajeActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-
-                new Play("", 0).setVisible(true);
-            }
-        });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private void jtfNivelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNivelActionPerformed
+
+    }
+
+    private void jtfPuntajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfPuntajeActionPerformed
+
+    }
+
+    /**
+     * Declaracion de variables de la interfaz grafica
+     */
+
     private javax.swing.JButton btnEnviar;
     private javax.swing.JButton btnRetirar;
     private javax.swing.JLabel jLabel1;

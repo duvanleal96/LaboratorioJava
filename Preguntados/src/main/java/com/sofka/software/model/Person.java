@@ -6,8 +6,10 @@ import com.sofka.software.interfazconexion.InterfacePerson;
 import javax.swing.JOptionPane;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.logging.Logger;
 
 public class Person implements InterfacePerson {
+      Logger log = Logger.getLogger("log");
       protected final String sql_insert = "INSERT INTO tbjugador (nombre,puntajeTotal) values (?,?)";
       protected final String sql_consult = "SELECT * FROM tbjugador WHERE id=(SELECT max(id) FROM tbjugador)";
       protected final String sql_update = "UPDATE tbjugador SET puntajeTotal=? WHERE id=?";
@@ -33,7 +35,7 @@ public class Person implements InterfacePerson {
                         JOptionPane.showMessageDialog(null, "El juego empezará !!");
                   }
             } catch (Exception e) {
-                  System.err.println("Error al guardar los datos del jugador : " + e.getMessage());
+                  log.info("Error al guardar los datos del jugador : " + e.getMessage());
             } finally {
                   ps = null;
                   con.close();
@@ -41,6 +43,10 @@ public class Person implements InterfacePerson {
             return 0;
       }
 
+      /**
+       * metodo consultar jugador , obtiene la consulta del id de jugador en la BD y la guarda en la una variable
+       * @return idPlayer
+       */
       public int queryPlayer() {
             int idPlayer = 0;
             try {
@@ -50,7 +56,7 @@ public class Person implements InterfacePerson {
                         idPlayer = res.getInt("id");
                   }
             } catch (Exception e) {
-                  System.err.println("Error al consultar id del jugador : " + e.getMessage());
+                  log.info("Error al consultar id del jugador : " + e.getMessage());
             } finally {
                   ps = null;
                   con.close();

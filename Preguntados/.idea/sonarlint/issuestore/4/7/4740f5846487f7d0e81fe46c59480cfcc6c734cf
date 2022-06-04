@@ -1,16 +1,0 @@
-
-{
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(§øúøÿÿÿÿ8ş”şİ’0
-
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(èùœı8åüİ’0
-v	java:S116
-"URename this field "sql_select" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îÄë›ıÿÿÿÿ8Ãòùİ’0
-m	java:S116"XRename this field "sql_selectCat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÔŸÚ
-C
-java:S1170
-"!Make this final field static too.(îÄë›ıÿÿÿÿ8Ãòùİ’0
-7
-java:S1170"!Make this final field static too.(ìÔŸÚ
-N	java:S106 "9Replace this use of System.out or System.err by a logger.(Âƒ©€
-S	java:S1062"9Replace this use of System.out or System.err by a logger.(õñçûÿÿÿÿ
-S	java:S106E"9Replace this use of System.out or System.err by a logger.(õñ¤Ÿøÿÿÿÿ

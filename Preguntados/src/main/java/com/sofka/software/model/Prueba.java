@@ -5,6 +5,9 @@ import com.sofka.software.conexion.base.datos.Conexion;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+/**
+ * clase prueba , permite probar las consultas para verificar el estado de la BD
+ */
 public class Prueba {
     private PreparedStatement ps=null;
     private ResultSet res;
